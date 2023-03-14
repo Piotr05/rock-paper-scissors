@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rock, paper, scissors!</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/mode2.css"></link>
+    <link rel="stylesheet" type="text/css" href="css/main.css"></link>
+    <script src="https://kit.fontawesome.com/45e86ce996.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="header">
+        <span class="header__logo">Rock, Paper, Scissors!</span>
+        <nav class="header__nav">
+            <a href="index.html" class="header__nav_options">MODE 1</a>
+            <a href="mode2.html" class="header__nav_options">MODE 2</a>
+        </nav>
+    </header>
+    <main>
+        <div class="win">
+            <span class="win__text">WIN!</span>
+        </div>
+        <div class="draw">
+            <span class="draw__text">DRAW!</span>
+        </div>
+        <div class="lose">
+            <span class="lose__text">LOSE!</span>
+        </div>
+        <div class="game">
+            <div class="game__icons-box">
+                <div class="game__icons-box_random">
+
+                </div>
+                <div class="game__icons-box_choice">
+                    <i class="fa-solid fa-hand-scissors" data-type="scissors"></i>
+                </div>
+            </div>
+            <div class="game__buttons">
+                <button class="game__buttons_btn" data-btn-type="rock">
+                    <i class="fa-solid fa-hand-back-fist"></i>
+                    <br>
+                    <span class="game__buttons_btn_name">rock!</span>
+                </button>
+                <button class="game__buttons_btn" data-btn-type="paper">
+                    <i class="fa-solid fa-hand"></i>
+                    <br>
+                    <span class="game__buttons_btn_name">paper!</span>
+                </button>
+                <button class="game__buttons_btn" data-btn-type="scissors">
+                    <i class="fa-solid fa-hand-scissors"></i>
+                    <br>
+                    <span class="game__buttons_btn_name">scissors!</span>
+                </button>
+            </div>
+            <button class="game__start-btn">START!</button>
+        </div>
+    </main>
+    <script src="js/mode2.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+:root {
+    font-size: 10px;
+    --background: #2B2D42;
+    --dark-red: #D90429;
+    --light-red: #EF233C;
+    --grey: #8D99AE;
+    --text-color: #EDF2F4;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+body {
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* MAIN */
+.game {
+    width: 600px;
+    margin: 100px 0;
+}
+.game__icons-box {
+    display: flex;
+    flex-direction: row;
+}
+.game__icons-box_random, .game__icons-box_choice {
+    width: 50%;
+    height: auto;
+    background-color: var(--light-red);
+    border-radius: 15px 0 0 0;
+    font-size: 20rem;
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 0;
+}
+.game__icons-box_choice {
+    border-radius: 0 15px 0 0;
+    border-left: 1px solid var(--grey);
+}
+.game__buttons {
+    width: 100%;
+}
+.game__buttons_btn {
+    width: 33.1%;
+    height: auto;
+    background-color: var(--grey);
+    color: var(--text-color);
+    border: none;
+    outline: none;
+    padding: 40px;
+    transition: background-color .2s;
+}
+.game__buttons_btn i {
+    font-size: 6rem;
+}
+.game__buttons_btn_name {
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+.game__start-btn {
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    font-size: 3rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0 0 15px 15px;
+    background-color: var(--light-red);
+    color: var(--text-color);
+    transition: background-color .2s;
+}
+.game__start-btn:hover {
+    background-color: #c71c31;
+}
+.game__buttons_btn:hover {
+    background-color: #7a8699;
+}
+.game__buttons_btn:focus {
+    background-color: #7a8699;
+}
+.game__buttons_btn:hover, .game__start-btn:hover {
+    cursor: pointer;
+}
