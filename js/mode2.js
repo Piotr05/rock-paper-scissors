@@ -40,11 +40,7 @@ gameBtn.forEach(e => {
 
 // START
 function start() {
-    // RANDOM CHOICE
-    const randomBox = document.querySelector('.game__icons-box_random');
-    const selectionDraw = Math.floor(Math.random() * 3);
-    randomBox.innerHTML = option[selectionDraw].html;
-
+    randomChoice();
     // WIN VALIDATION
     const type = document.querySelector('.game__icons-box_random i');
     if (choice == 'rock' && type.dataset.type == 'rock') {
@@ -74,6 +70,19 @@ function start() {
 
     // DISABLE START BUTTON
     startBtn.disabled = true;
+}
+
+// RANDOM CHOICE
+let selectionDraw = Math.floor(Math.random() * 3);
+let lastSelectionDraw;
+function randomChoice() {
+    const randomBox = document.querySelector('.game__icons-box_random');
+    if (lastSelectionDraw == selectionDraw) {
+        selectionDraw = Math.floor(Math.random() * 3);
+    }
+    console.log(selectionDraw);
+    randomBox.innerHTML = option[selectionDraw].html;
+    lastSelectionDraw = selectionDraw;
 }
 
 // POPUPS

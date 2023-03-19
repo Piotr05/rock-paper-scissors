@@ -16,6 +16,7 @@ const option = [
 // START BUTTON
 document.querySelector('.game__start-btn').addEventListener('click', start);
 document.querySelector('.game__start-btn').addEventListener('click', () => {
+    document.querySelector('.game__start-btn').disabled = true;
     document.querySelectorAll('.game__buttons_btn').forEach((e) => {
         e.disabled = false;
     });
@@ -27,7 +28,6 @@ let timer = 0;
 function start() {
     if (onoff == true) {
         const game__random = document.querySelector('.game__random');
-
         game__random.innerHTML = option[timer].html;
         timer++;
         if (timer > 2) {
@@ -43,6 +43,7 @@ function start() {
 document.querySelectorAll('.game__buttons_btn').forEach((e) => {
     e.disabled = true;
     e.addEventListener('click', (e) => {
+        document.querySelector('.game__start-btn').disabled = false;
         disableBtn();
         const btnType = e.currentTarget.dataset.btnType;
         const type = document.querySelector('.game__random i');
